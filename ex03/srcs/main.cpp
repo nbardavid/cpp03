@@ -1,26 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.Class.hpp                                 :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nbardavi <nbabardavid@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/27 13:59:07 by nbardavi          #+#    #+#             */
-/*   Updated: 2024/03/28 11:04:16 by nbardavi         ###   ########.fr       */
+/*   Created: 2024/03/27 12:05:10 by nbardavi          #+#    #+#             */
+/*   Updated: 2024/03/28 15:13:02 by nbardavi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRAGTRAP_CLASS_HPP
-#define FRAGTRAP_CLASS_HPP
+#include "../include/ClapTrap.Class.hpp"
+#include "../include/ScavTrap.Class.hpp"
+#include "../include/FragTrap.Class.hpp"
+#include "../include/DiamondTrap.Class.hpp"
+#include <iostream>
 
-#include <string>
-#include "ClapTrap.Class.hpp"
-
-class FragTrap:public ClapTrap {
-public:
-	FragTrap( const std::string& name );
-    ~FragTrap();
-    void highFiveGuys( void );
-};
-
-#endif
+int main( void ){
+	DiamondTrap robot("FT-1B");
+	std::cout << robot << std::endl;
+	return (1);
+}

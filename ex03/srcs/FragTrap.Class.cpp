@@ -6,7 +6,7 @@
 /*   By: nbardavi <nbabardavid@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/27 11:25:03 by nbardavi          #+#    #+#             */
-/*   Updated: 2024/03/28 11:35:56 by nbardavi         ###   ########.fr       */
+/*   Updated: 2024/03/28 11:01:18 by nbardavi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 // *                 Constructors                  *
 // ************************************************
 
-FragTrap::FragTrap( const std::string& name ):ClapTrap(name, 100, 100, 30){
+FragTrap::FragTrap( const std::string& name ):ClapTrap(name, 100, 50, 20){
 	std::cout << Color::GREEN << "New FragTrap have been created, is name is : " << this->getName() << Color::RESET << std::endl;
 }
 

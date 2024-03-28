@@ -2,9 +2,9 @@ CXX=g++
 CXXFLAGS=-std=c++98 -Wall -Wextra -Werror
 SRCDIR=srcs
 OBJDIR=obj
-SRCS=$(SRCDIR)/ClapTrap.Class.cpp $(SRCDIR)/main.cpp $(SRCDIR)/ScavTrap.Class.cpp $(SRCDIR)/FragTrap.Class.cpp
+SRCS=$(SRCDIR)/ClapTrap.Class.cpp $(SRCDIR)/main.cpp $(SRCDIR)/ScavTrap.Class.cpp $(SRCDIR)/FragTrap.Class.cpp $(SRCDIR)/DiamondTrap.Class.cpp
 OBJS=$(SRCS:$(SRCDIR)/%.cpp=$(OBJDIR)/%.o)
-TARGET=FragTrap
+TARGET=DiamondTrap
 
 GREEN = \033[38;2;4;231;98m
 BLUE = \033[38;2;119;166;182m
