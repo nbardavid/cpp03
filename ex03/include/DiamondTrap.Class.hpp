@@ -1,26 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.Class.hpp                                 :+:      :+:    :+:   */
+/*   DiamondTrap.Class.hpp                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nbardavi <nbabardavid@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/27 13:59:07 by nbardavi          #+#    #+#             */
-/*   Updated: 2024/03/28 11:04:16 by nbardavi         ###   ########.fr       */
+/*   Updated: 2024/03/28 14:42:48 by nbardavi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRAGTRAP_CLASS_HPP
-#define FRAGTRAP_CLASS_HPP
+#ifndef DIAMONDTRAP_CLASS_HPP
+#define DIAMONDTRAP_CLASS_HPP
 
 #include <string>
-#include "ClapTrap.Class.hpp"
+#include "ScavTrap.Class.hpp"
+#include "FragTrap.Class.hpp"
 
-class FragTrap:public ClapTrap {
+class DiamondTrap:public ScavTrap, public FragTrap{
 public:
-	FragTrap( const std::string& name );
-    ~FragTrap();
-    void highFiveGuys( void );
+	DiamondTrap( const std::string& name );
+    ~DiamondTrap();
+private:
+	std::string _name;
+
 };
 
+std::ostream& operator<<(std::ostream& out, const DiamondTrap& f);
+
 #endif
+
