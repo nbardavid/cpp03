@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.Class.hpp                                 :+:      :+:    :+:   */
+/*   FragTrap.Class.hpp                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nbardavi <nbabardavid@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/27 13:59:07 by nbardavi          #+#    #+#             */
-/*   Updated: 2024/03/28 09:23:16 by nbardavi         ###   ########.fr       */
+/*   Updated: 2024/03/28 10:50:45 by nbardavi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@
 #include <string>
 #include "ClapTrap.Class.hpp"
 
-class ScavTrap:public ClapTrap {
+class FragTrap:public ClapTrap {
 public:
-	ScavTrap( const std::string& name );
-    ~ScavTrap();
+	FragTrap( const std::string& name );
+    ~FragTrap();
     void guardGate();
 	void attack( const std::string& target );
 };

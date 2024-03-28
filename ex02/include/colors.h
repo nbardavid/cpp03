@@ -1,27 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.Class.hpp                                 :+:      :+:    :+:   */
+/*   colors.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nbardavi <nbabardavid@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/27 13:59:07 by nbardavi          #+#    #+#             */
-/*   Updated: 2024/03/28 09:23:16 by nbardavi         ###   ########.fr       */
+/*   Created: 2024/03/20 16:54:24 by nbardavi          #+#    #+#             */
+/*   Updated: 2024/03/20 16:54:51 by nbardavi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP_CLASS_HPP
-#define SCAVTRAP_CLASS_HPP
+#ifndef COLORS_H
+#define COLORS_H
 
 #include <string>
-#include "ClapTrap.Class.hpp"
 
-class ScavTrap:public ClapTrap {
-public:
-	ScavTrap( const std::string& name );
-    ~ScavTrap();
-    void guardGate();
-	void attack( const std::string& target );
-};
+namespace Color {
+    const std::string RESET = "\033[0m";
+    const std::string RED = "\033[31m";
+    const std::string GREEN = "\033[32m";
+    const std::string YELLOW = "\033[33m";
+    const std::string BLUE = "\033[34m";
+}
 
 #endif
