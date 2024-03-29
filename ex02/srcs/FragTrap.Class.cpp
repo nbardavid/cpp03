@@ -6,7 +6,7 @@
 /*   By: nbardavi <nbabardavid@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/27 11:25:03 by nbardavi          #+#    #+#             */
-/*   Updated: 2024/03/28 11:35:56 by nbardavi         ###   ########.fr       */
+/*   Updated: 2024/03/29 11:30:55 by nbardavi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,15 @@
 // ************************************************
 // *                 Constructors                  *
 // ************************************************
+//
+FragTrap::FragTrap(): ClapTrap(){
+	this->setHitPoint(100);
+	this->setEnergyPoint(100);
+	this->setAttackDamage(30);
+	return ;
+}
 
-FragTrap::FragTrap( const std::string& name ):ClapTrap(name, 100, 100, 30){
+FragTrap::FragTrap( const std::string& name ):ClapTrap(name){
 	std::cout << Color::GREEN << "New FragTrap have been created, is name is : " << this->getName() << Color::RESET << std::endl;
 }
 
@@ -26,6 +33,9 @@ FragTrap::~FragTrap(){
 	std::cout << Color::RED << "FragTrap " << this->getName() << " has been destructed" << Color::RESET << std::endl;
 }
 
+FragTrap::FragTrap(const FragTrap& other):ClapTrap(other){
+	std::cout << Color::GREEN << "New FragTrap have been copied, is name is : " << this->getName() << Color::RESET << std::endl;
+}
 // ************************************************
 // *                  Functions                  *
 // ************************************************

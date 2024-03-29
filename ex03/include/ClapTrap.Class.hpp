@@ -6,7 +6,7 @@
 /*   By: nbardavi <nbabardavid@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/27 11:16:52 by nbardavi          #+#    #+#             */
-/*   Updated: 2024/03/28 14:30:38 by nbardavi         ###   ########.fr       */
+/*   Updated: 2024/03/28 15:36:27 by nbardavi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ public:
 	// ************************************************
 	// *                	Constructors              *
 	// ************************************************
+	ClapTrap();
     ClapTrap( const std::string& name );
     ClapTrap(const ClapTrap& other);
 
