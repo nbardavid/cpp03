@@ -6,7 +6,7 @@
 /*   By: nbardavi <nbabardavid@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/27 11:16:52 by nbardavi          #+#    #+#             */
-/*   Updated: 2024/03/29 11:05:36 by nbardavi         ###   ########.fr       */
+/*   Updated: 2024/03/28 15:36:27 by nbardavi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ public:
 	// ************************************************
 	// *                	Constructors              *
 	// ************************************************
-	ClapTrap ();
+	ClapTrap();
     ClapTrap( const std::string& name );
     ClapTrap(const ClapTrap& other);
 
@@ -33,18 +33,10 @@ public:
 	// *                  Functions                   *
 	// ************************************************
 
-	void attack( const std::string& target );
+	virtual void attack( const std::string& target );
 	void takeDamage( unsigned int amount );
 	void beRepaired( unsigned int amount );
 	
-	// ************************************************
-	// *                	Set Functions             *
-	// ************************************************
-
-	void setName( const std::string& name );
-	void setHitPoint( const int& value);
-	void setEnergyPoint( const int& value);
-	void setAttackDamage( const int& value);
 
 	// ************************************************
 	// *                	Get Functions             *
@@ -55,7 +47,19 @@ public:
 	int getEnergyPoint() const;
 	int getAttackDamage() const;
 
-private:
+protected:
+
+	ClapTrap(const std::string& name, const int& hitPoint, const int& energyPoint, const int& attackDamage);
+
+	// ************************************************
+	// *                	Set Functions             *
+	// ************************************************
+
+	void setName( const std::string& name );
+	void setHitPoint( const int& value);
+	void setEnergyPoint( const int& value);
+	void setAttackDamage( const int& value);
+
 	std::string _name;
 	int _hitPoint;
 	int _energyPoint;

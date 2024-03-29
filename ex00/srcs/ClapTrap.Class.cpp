@@ -6,7 +6,7 @@
 /*   By: nbardavi <nbabardavid@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/27 11:25:03 by nbardavi          #+#    #+#             */
-/*   Updated: 2024/03/29 11:04:07 by nbardavi         ###   ########.fr       */
+/*   Updated: 2024/03/29 15:10:38 by nbardavi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,8 @@
 #include <iostream>
 
 // ************************************************
-// *                 Constructors                  *
+// *                 Constructors                 *
 // ************************************************
-
 ClapTrap::ClapTrap(){
 	return ;
 }
@@ -34,8 +33,11 @@ ClapTrap::~ClapTrap(){
 	std::cout << Color::RED << "ClapTrap " << this->getName() << " has been destructed" << Color::RESET << std::endl;
 }
 
+ClapTrap::ClapTrap( const std::string& name, const int& hitPoint, const int& energyPoint, const int& attackDamage):_name(name), _hitPoint(hitPoint), _energyPoint(energyPoint), _attackDamage(attackDamage){
+	std::cout << Color::GREEN << "New ClapTrap have been created, is name is : " << this->getName() << Color::RESET << std::endl;
+}
 // ************************************************
-// *                  Operators                  *
+// *                  Operators                   *
 // ************************************************
 
 ClapTrap& ClapTrap::operator=(const ClapTrap& other){
@@ -49,7 +51,7 @@ ClapTrap& ClapTrap::operator=(const ClapTrap& other){
 }
 
 // ************************************************
-// *                Get Functions                *
+// *                Get Functions                 *
 // ************************************************
 
 std::string ClapTrap::getName( void ) const{
@@ -69,7 +71,7 @@ int ClapTrap::getAttackDamage( void ) const{
 }
 
 // ************************************************
-// *                Set Functions                *
+// *                Set Functions                 *
 // ************************************************
 
 void ClapTrap::setName( const std::string& name ){
@@ -89,7 +91,7 @@ void ClapTrap::setAttackDamage( const int& value ){
 }
 
 // ************************************************
-// *                  Functions                  *
+// *                  Functions                   *
 // ************************************************
 
 void ClapTrap::attack( const std::string& target ){
