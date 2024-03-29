@@ -6,7 +6,7 @@
 /*   By: nbardavi <nbabardavid@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/27 11:25:03 by nbardavi          #+#    #+#             */
-/*   Updated: 2024/03/28 10:53:18 by nbardavi         ###   ########.fr       */
+/*   Updated: 2024/03/29 11:04:09 by nbardavi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,10 @@
 // ************************************************
 // *                 Constructors                  *
 // ************************************************
+
+ClapTrap::ClapTrap(){
+	return ;
+}
 
 ClapTrap::ClapTrap( const std::string& name ):_name(name), _hitPoint(10), _energyPoint(10), _attackDamage(0){
 	std::cout << Color::GREEN << "New ClapTrap have been created, is name is : " << this->getName() << Color::RESET << std::endl;
