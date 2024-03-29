@@ -6,7 +6,7 @@
 /*   By: nbardavi <nbabardavid@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/27 11:25:03 by nbardavi          #+#    #+#             */
-/*   Updated: 2024/03/29 11:30:55 by nbardavi         ###   ########.fr       */
+/*   Updated: 2024/03/29 14:28:02 by nbardavi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,14 @@ FragTrap::~FragTrap(){
 FragTrap::FragTrap(const FragTrap& other):ClapTrap(other){
 	std::cout << Color::GREEN << "New FragTrap have been copied, is name is : " << this->getName() << Color::RESET << std::endl;
 }
+
+FragTrap& FragTrap::operator=(const FragTrap& other) {
+	if (this != &other) {
+		ClapTrap::operator=(other);
+	}
+	return *this;
+}
+
 // ************************************************
 // *                  Functions                  *
 // ************************************************

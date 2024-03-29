@@ -6,7 +6,7 @@
 /*   By: nbardavi <nbabardavid@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/27 11:16:52 by nbardavi          #+#    #+#             */
-/*   Updated: 2024/03/29 11:05:15 by nbardavi         ###   ########.fr       */
+/*   Updated: 2024/03/28 15:36:27 by nbardavi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ public:
 	// ************************************************
 	// *                	Constructors              *
 	// ************************************************
-	ClapTrap ();
+	ClapTrap();
     ClapTrap( const std::string& name );
     ClapTrap(const ClapTrap& other);
 
@@ -60,7 +60,6 @@ protected:
 	void setEnergyPoint( const int& value);
 	void setAttackDamage( const int& value);
 
-private:
 	std::string _name;
 	int _hitPoint;
 	int _energyPoint;
